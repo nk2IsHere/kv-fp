@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="4dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentPlaceholder"
+        android:layout_width="match_parent"
+        android:background="@drawable/fp_bg_dotted"
+        android:padding="8dp"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/dateImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/fp_time"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="0.0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/dateImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dateImage" />
+
+            <ImageView
+                android:id="@+id/weightImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/fp_weight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/dateImage"/>
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="3"
+                android:maxLines="1"
+                android:layout_marginStart="8dp"
+                android:text="0.0"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/weightImage"
+                app:layout_constraintBottom_toBottomOf="@+id/weightImage"/>
+
+            <ImageView
+                android:id="@+id/growthImage"
+                android:layout_marginTop="4dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/fp_growth"
+                app:layout_constraintTop_toBottomOf="@+id/weightImage" />
+
+            <TextView
+                android:id="@+id/growth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="3"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:text="0.0"
+                android:textSize="20sp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/growthImage"
+                app:layout_constraintStart_toEndOf="@id/growthImage"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/coefficientText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="%"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/coefficient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:maxEms="3"
+            android:maxLines="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/coefficientText"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
